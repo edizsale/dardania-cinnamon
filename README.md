@@ -33,6 +33,23 @@ Sonra **Cinnamon Ayarları → Temalar**'ı aç:
 
 Değişiklik anında uygulanır, oturum yeniden başlatmaya gerek yok.
 
+## Başlat menüsüne ShalaOS logosu koymak
+
+Cinnamon'da panel/menü ikonu, KDE'nin aksine tema dosyalarından değil, **Menu applet'inin
+kendi ayarından** geliyor — bu yüzden CSS ile otomatik gelmiyor, elle bir kez ayarlanması
+gerekiyor. Repo'da hazır bir amblem var: [`assets/dardania-logo.png`](assets/dardania-logo.png)
+(saydam arka planlı, 634×600).
+
+1. Panelde başlat düğmesine **sağ tık** → **"Configure..." / "Yapılandır..."** (ya da
+   panele sağ tık → *Applets* → listede **Menu**'yu bul → dişli/ayar simgesine tıkla)
+2. Açılan ayar penceresinde menü ikonunu değiştiren bir alan olacak (genelde küçük bir
+   ikon önizlemesi + üzerine tıklanabilir buton). Ona tıkla, **"Browse..."** ya da dosya
+   simgesiyle `assets/dardania-logo.png` dosyasını seç.
+3. Uygula/kapat — panel ikonu değişmeli.
+
+> Cinnamon sürümüne göre bu menünün tam adı/yeri değişebilir. Yukarıdaki yolu bulamazsan
+> ne gördüğünü yaz, adım adım düzeltirim.
+
 ## Bilinen sınırlamalar
 
 - **Görsel olarak test edilmedi.** Bu tema, KDE tarafındaki gerçek renk değerlerinden
