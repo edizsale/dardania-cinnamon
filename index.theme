@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Dardania
+Comment=ShalaOS dardania temasinin Cinnamon uyarlamasi -- koyu zemin, kirmizi vurgu (228,20,30). Pencere kenarligi/dugmeleri bu temaya dahil degildir.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Dardania
+CinnamonTheme=Dardania

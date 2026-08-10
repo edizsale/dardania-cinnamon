@@ -1,0 +1,286 @@
+/* Renk paleti (KDE dardania temasindaki DardaniaDark.colors ile ayni degerler).
+   St CSS'te degisken destegi guvenilir olmadigindan degerler dogrudan yazildi:
+   bg #201c1d | bg-alt #282324 | panel/header #191617 | accent #e4141e
+   accent-hover #ff4046 | fg #f2f2f2 | fg-muted #969192 | border #3a3435 */
+
+#panel {
+  background-color: #191617;
+  color: #f2f2f2;
+  font-weight: normal;
+  box-shadow: none;
+  border: none;
+}
+
+#panel.panel-top {
+  border-bottom: 1px solid #3a3435;
+}
+
+#panel.panel-bottom {
+  border-top: 1px solid #3a3435;
+}
+
+#panel .panel-button {
+  color: #f2f2f2;
+  -natural-hpadding: 8px;
+  transition-duration: 100ms;
+}
+
+#panel .panel-button:hover {
+  background-color: rgba(228, 20, 30, 0.16);
+  color: #ffffff;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:focus,
+#panel .panel-button:checked {
+  background-color: rgba(228, 20, 30, 0.28);
+  color: #ffffff;
+}
+
+#panel .panel-button.menu-favorite:hover,
+#panel .system-status-icon:hover {
+  color: #ffffff;
+}
+
+.popup-menu-boxpointer,
+.popup-menu-content,
+.menu {
+  background-color: #282324;
+  border: 1px solid #3a3435;
+  border-radius: 8px;
+  color: #f2f2f2;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+
+.popup-menu-item {
+  color: #f2f2f2;
+  spacing: 8px;
+  transition-duration: 100ms;
+}
+
+.popup-menu-item:active,
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+  background-color: #e4141e;
+  color: #ffffff;
+}
+
+.popup-menu-item:insensitive {
+  color: #969192;
+}
+
+.popup-menu-item .popup-menu-icon {
+  icon-size: 1.14em;
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-line {
+  background-color: #3a3435;
+  height: 1px;
+}
+
+.popup-sub-menu {
+  background-color: #201c1d;
+  border: 1px solid #3a3435;
+}
+
+/* "Menu" uygulamasi (baslat menusu) */
+.menu-favorites-box,
+.menu-places-box {
+  background-color: #201c1d;
+  border-right: 1px solid #3a3435;
+}
+
+.menu-category-button,
+.menu-application-button {
+  color: #f2f2f2;
+  transition-duration: 100ms;
+}
+
+.menu-category-button:hover,
+.menu-category-button:active,
+.menu-category-button:selected,
+.menu-application-button:hover,
+.menu-application-button:active,
+.menu-application-button:selected {
+  background-color: #e4141e;
+  color: #ffffff;
+}
+
+.menu-search-entry {
+  background-color: #161415;
+  border: 1px solid #3a3435;
+  border-radius: 6px;
+  color: #f2f2f2;
+  selected-color: #ffffff;
+  selection-background-color: #e4141e;
+}
+
+.menu-selected-app-title {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.menu-selected-app-description {
+  color: #969192;
+}
+
+.calendar,
+.datemenu-calendar-column {
+  background-color: #282324;
+  border: 1px solid #3a3435;
+  border-radius: 8px;
+}
+
+.calendar-day-base {
+  color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.calendar-day-base:hover {
+  background-color: rgba(228, 20, 30, 0.2);
+}
+
+.calendar-today {
+  background-color: #e4141e;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.calendar-nonwork-day {
+  color: #969192;
+}
+
+.notification,
+.notification-multi-line-notification {
+  background-color: #282324;
+  border: 1px solid #3a3435;
+  border-radius: 8px;
+  color: #f2f2f2;
+}
+
+.notification-icon-button,
+.notification-button {
+  background-color: #2a2526;
+  border: 1px solid #3a3435;
+  border-radius: 6px;
+  color: #f2f2f2;
+}
+
+.notification-button:hover,
+.notification-icon-button:hover {
+  background-color: #e4141e;
+  border-color: #e4141e;
+  color: #ffffff;
+}
+
+.osd-window {
+  background-color: rgba(25, 22, 23, 0.92);
+  border: 1px solid #3a3435;
+  border-radius: 12px;
+  color: #f2f2f2;
+}
+
+.osd-window .level {
+  background-color: #2a2526;
+  border-radius: 999px;
+}
+
+.osd-window .level-bar {
+  background-color: #e4141e;
+  border-radius: 999px;
+}
+
+.switcher-list {
+  background-color: rgba(25, 22, 23, 0.92);
+  border: 1px solid #3a3435;
+  border-radius: 12px;
+  color: #f2f2f2;
+}
+
+.switcher-list .item-box {
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+
+.switcher-list .item-box:outlined,
+.switcher-list .item-box:selected {
+  border-color: #e4141e;
+  background-color: rgba(228, 20, 30, 0.16);
+}
+
+.workspace-osd {
+  background-color: rgba(25, 22, 23, 0.92);
+  border: 1px solid #3a3435;
+  border-radius: 8px;
+  color: #f2f2f2;
+}
+
+.tooltip {
+  background-color: #191617;
+  border: 1px solid #3a3435;
+  border-radius: 6px;
+  color: #f2f2f2;
+}
+
+.run-dialog,
+.run-dialog-entry,
+.confirm-dialog,
+.polkit-dialog {
+  background-color: #201c1d;
+  border: 1px solid #3a3435;
+  border-radius: 10px;
+  color: #f2f2f2;
+}
+
+.button {
+  background-color: #2a2526;
+  border: 1px solid #3a3435;
+  border-radius: 6px;
+  color: #f2f2f2;
+  transition-duration: 100ms;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #322c2d;
+  border-color: #e4141e;
+}
+
+.button:active,
+.button:default {
+  background-color: #e4141e;
+  border-color: #e4141e;
+  color: #ffffff;
+}
+
+.toggle-switch-us,
+.toggle-switch-intl {
+  color: #f2f2f2;
+}
+
+.toggle-switch-us.checked,
+.toggle-switch-intl.checked {
+  color: #e4141e;
+}
+
+.vfade,
+.hfade {
+  -st-vfade-offset: 32px;
+  -st-hfade-offset: 32px;
+}
+
+StScrollBar StBin#trough {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+StScrollBar StBin#vhandle,
+StScrollBar StBin#hhandle {
+  background-color: rgba(242, 242, 242, 0.25);
+  border-radius: 999px;
+}
+
+StScrollBar StBin#vhandle:hover,
+StScrollBar StBin#hhandle:hover {
+  background-color: #e4141e;
+}

@@ -1,0 +1,302 @@
+@define-color bg #201c1d;
+@define-color bg_alt #282324;
+@define-color base #161415;
+@define-color base_alt #1e1b1c;
+@define-color button_bg #2a2526;
+@define-color button_bg_hover #322c2d;
+@define-color button_bg_active #3a3435;
+@define-color header_bg #191617;
+@define-color header_bg_backdrop #201c1d;
+@define-color accent #e4141e;
+@define-color accent_hover #ff4046;
+@define-color border_color #3a3435;
+@define-color fg #f2f2f2;
+@define-color fg_muted #969192;
+@define-color fg_on_accent #ffffff;
+@define-color link_color #ff5b63;
+@define-color error_color #da4453;
+@define-color warning_color #f67400;
+@define-color success_color #27ae60;
+
+@define-color theme_bg_color @bg;
+@define-color theme_fg_color @fg;
+@define-color theme_base_color @base;
+@define-color theme_text_color @fg;
+@define-color theme_selected_bg_color @accent;
+@define-color theme_selected_fg_color @fg_on_accent;
+@define-color insensitive_bg_color @bg;
+@define-color insensitive_fg_color @fg_muted;
+@define-color borders @border_color;
+@define-color theme_unfocused_borders alpha(@border_color, 0.7);
+
+* {
+  outline-color: alpha(@accent, 0.5);
+}
+
+window,
+.background {
+  background-color: @bg;
+  color: @fg;
+}
+
+label {
+  color: @fg;
+}
+label:disabled {
+  color: @fg_muted;
+}
+
+entry,
+spinbutton,
+textview {
+  background-color: @base;
+  color: @fg;
+  border: 1px solid @border_color;
+  border-radius: 4px;
+  caret-color: @accent;
+}
+entry:focus,
+spinbutton:focus,
+textview:focus {
+  border-color: @accent;
+  box-shadow: inset 0 0 0 1px alpha(@accent, 0.4);
+}
+entry:disabled,
+textview:disabled {
+  color: @fg_muted;
+  background-color: @bg;
+}
+
+selection,
+*:selected,
+entry selection,
+textview selection {
+  background-color: @accent;
+  color: @fg_on_accent;
+}
+
+button {
+  background-color: @button_bg;
+  color: @fg;
+  border: 1px solid @border_color;
+  border-radius: 6px;
+  padding: 4px 10px;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+button:hover {
+  background-color: @button_bg_hover;
+  border-color: alpha(@accent, 0.5);
+}
+button:active,
+button:checked {
+  background-color: @button_bg_active;
+  border-color: @accent;
+}
+button:disabled {
+  background-color: @bg;
+  color: @fg_muted;
+  border-color: @border_color;
+}
+button.flat {
+  background-color: transparent;
+  border-color: transparent;
+}
+button.flat:hover {
+  background-color: alpha(@button_bg_hover, 0.6);
+}
+
+button.suggested-action {
+  background-color: @accent;
+  color: @fg_on_accent;
+  border-color: @accent;
+}
+button.suggested-action:hover {
+  background-color: @accent_hover;
+}
+
+button.destructive-action {
+  background-color: @error_color;
+  color: @fg_on_accent;
+  border-color: @error_color;
+}
+button.destructive-action:hover {
+  background-color: shade(@error_color, 1.15);
+}
+
+checkbutton check,
+radiobutton radio {
+  background-color: @button_bg;
+  border: 1px solid @border_color;
+}
+checkbutton check:checked,
+radiobutton radio:checked {
+  background-color: @accent;
+  border-color: @accent;
+  color: @fg_on_accent;
+}
+
+switch {
+  background-color: @button_bg;
+  border: 1px solid @border_color;
+  border-radius: 999px;
+}
+switch:checked {
+  background-color: @accent;
+  border-color: @accent;
+}
+switch slider {
+  background-color: @fg;
+  border-radius: 999px;
+}
+
+scale trough {
+  background-color: @button_bg;
+  border-radius: 999px;
+}
+scale trough highlight {
+  background-color: @accent;
+  border-radius: 999px;
+}
+scale slider {
+  background-color: @fg;
+  border-radius: 999px;
+}
+scale slider:hover {
+  background-color: @accent_hover;
+}
+
+progressbar progress {
+  background-color: @accent;
+  border-radius: 999px;
+}
+progressbar trough {
+  background-color: @button_bg;
+  border-radius: 999px;
+}
+
+scrollbar {
+  background-color: transparent;
+}
+scrollbar slider {
+  background-color: alpha(@fg, 0.25);
+  border-radius: 999px;
+  min-width: 8px;
+  min-height: 8px;
+}
+scrollbar slider:hover {
+  background-color: alpha(@accent, 0.6);
+}
+scrollbar slider:active {
+  background-color: @accent;
+}
+
+separator {
+  background-color: @border_color;
+}
+
+headerbar,
+.titlebar {
+  background-color: @header_bg;
+  color: @fg;
+  border-bottom: 1px solid @border_color;
+  box-shadow: none;
+}
+headerbar:backdrop,
+.titlebar:backdrop {
+  background-color: @header_bg_backdrop;
+}
+/* Pencere kontrol dugmeleri (kucult/buyut/kapat) kasten burada
+   stillendirilmiyor -- talep geregi GTK varsayilanini koruyor. */
+
+menu,
+menuitem,
+.menu {
+  background-color: @bg_alt;
+  color: @fg;
+  border: 1px solid @border_color;
+  border-radius: 8px;
+}
+menuitem:hover {
+  background-color: @accent;
+  color: @fg_on_accent;
+}
+menuitem:disabled {
+  color: @fg_muted;
+}
+
+notebook > header {
+  background-color: @bg;
+  border-color: @border_color;
+}
+notebook > header tab {
+  background-color: transparent;
+  color: @fg_muted;
+  border-bottom: 2px solid transparent;
+  padding: 6px 12px;
+}
+notebook > header tab:checked {
+  color: @fg;
+  border-bottom-color: @accent;
+}
+notebook > header tab:hover {
+  color: @fg;
+}
+
+treeview {
+  background-color: @base;
+  color: @fg;
+}
+treeview:selected,
+treeview row:selected {
+  background-color: @accent;
+  color: @fg_on_accent;
+}
+treeview header button {
+  background-color: @bg_alt;
+  border-color: @border_color;
+}
+
+tooltip {
+  background-color: @header_bg;
+  color: @fg;
+  border: 1px solid @border_color;
+  border-radius: 6px;
+}
+
+popover {
+  background-color: @bg_alt;
+  color: @fg;
+  border: 1px solid @border_color;
+  border-radius: 8px;
+}
+
+calendar {
+  background-color: @base;
+  color: @fg;
+}
+calendar:selected {
+  background-color: @accent;
+  color: @fg_on_accent;
+}
+
+a {
+  color: @link_color;
+}
+
+infobar {
+  background-color: @bg_alt;
+  color: @fg;
+  border: 1px solid @border_color;
+}
+infobar.error {
+  background-color: alpha(@error_color, 0.18);
+  border-color: @error_color;
+}
+infobar.warning {
+  background-color: alpha(@warning_color, 0.18);
+  border-color: @warning_color;
+}
+infobar.info {
+  background-color: alpha(@accent, 0.18);
+  border-color: @accent;
+}
